@@ -1,0 +1,32 @@
+package org.dem;
+
+public class BaseClass {
+	 
+	
+	private void sas() {
+		System.out.println("yahhooo");
+
+	}
+	
+	
+	private void rsm() {
+		System.out.println("|gmail.vom");
+		
+		
+
+	}
+	public static void main(String[] args) {
+		
+		BaseClass b = new BaseClass();
+		
+		b.sas();
+		
+	}
+
+	
+	
+	
+	
+	
+
+}

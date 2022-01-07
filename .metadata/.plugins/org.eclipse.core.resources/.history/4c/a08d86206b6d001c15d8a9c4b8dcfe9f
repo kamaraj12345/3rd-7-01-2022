@@ -1,0 +1,116 @@
+package org.demo;
+
+import java.io.IOException;
+
+import org.junit.AfterClass;
+import org.junit.Assert;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.WebElement;
+
+
+public class Junit extends baseclass{
+	String path ="D:\\Pradeep\\ECLIPS\\eclipse\\demo\\excell data\\New Microsoft Excel Worksheet.xlsx";
+	@BeforeClass
+	public static void BeforeClass() {
+		getDriver();
+		loadUrl("https://adactinhotelapp.com/");
+		
+		
+		
+	}      
+@AfterClass
+	public static void AfterClass() {
+	close();
+		
+	}
+
+@Test
+public void Test1() throws IOException {
+	
+	
+	WebElement username = findElementById("username");
+	String name = getData(path,"Sheet1" , 1, 0);
+	type(username, name);
+	WebElement password = findElementById("password");
+	String passwordtxt = getData(path, "Sheet1", 1, 1);
+	type(password, passwordtxt);
+	WebElement login = findElementById("login");
+	click(login);
+	
+	
+	imple(30);
+	
+	WebElement texthotel = findElementByxpathtext("//td[@class='login_title']");
+	String text = texthotel.getText();
+	Assert.assertEquals("verifying search hotel", "Search Hotel (Fields marked with Red asterix (*) are mandatory)", text);
+	
+	
+	
+	
+	WebElement sctlocation = findElementById("location");
+	
+	String locationdata = getData(path, "Sheet1", 1, 2);
+	
+	
+	selectOptionsByText(sctlocation, locationdata);
+	
+	WebElement sctlhotels = findElementById("hotels");
+	String scthotel = getData(path, "Sheet1", 1, 3);
+	selectOptionsByText(sctlhotels, scthotel);
+	
+	WebElement roomtype = findElementById("room_type");
+	String roomtypessclt = getData(path, "Sheet1", 1, 4);
+	selectOptionsByText(roomtype, roomtypessclt);
+	
+	WebElement roomno = findElementById("room_nos");
+	String roomnoslt = getData(path, "Sheet1", 1, 5);
+	selectOptionsByText(roomno, roomnoslt);
+	
+	WebElement checkindate = findElementById("datepick_in");
+	String checkindatedata = getData(path, "Sheet1", 1, 6);
+	type(checkindate, checkindatedata);
+	
+	WebElement checkout = findElementById("datepick_out");
+	String checkoutdate = getData(path, "Sheet1", 1, 7);
+	type(checkout, checkoutdate);
+	
+	WebElement adult = findElementById("adult_room");
+	String adultData = getData(path, "Sheet1", 1, 8);
+	selectOptionsByText(adult, adultData);
+	
+	WebElement childroom = findElementById("child_room");
+	String childroomdata = getData(path, "Sheet1", 1, 9);
+	selectOptionsByText(childroom, childroomdata);
+	
+	WebElement submitclk = findElementById("Submit");
+	click(submitclk);
+	
+
+	WebElement selecthotel = findElementByxpathtext("//td[@class='login_title']");
+	String selecthoteltext = selecthotel.getText();
+	Assert.assertEquals("verifying search hotel", "Select Hotel", selecthoteltext);
+	
+	
+
+	
+	
+	
+	
+	
+	
+
+
+	
+	
+	
+	
+	
+	
+	
+	
+}
+
+
+
+}

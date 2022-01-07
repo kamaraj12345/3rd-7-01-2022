@@ -1,0 +1,21 @@
+package org.demo;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class finaloutput extends baseclass{
+	
+	@BeforeClass
+	private void BeforeClass() {
+		
+
+	}
+	@Test
+	private void booking() {
+		LoginPage lp= new LoginPage();
+		lp.login
+		
+	
+	}
+
+}

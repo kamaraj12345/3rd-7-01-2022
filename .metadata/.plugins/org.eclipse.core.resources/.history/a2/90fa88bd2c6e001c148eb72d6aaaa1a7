@@ -1,0 +1,31 @@
+package org.demo;
+
+import org.testng.annotations.AfterClass;
+import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Test;
+
+public class TestNg extends baseclass{
+
+	@BeforeClass
+	private void beforClass() {
+		getDriver();
+		loadUrl("https://adactinhotelapp.com/");
+		imple(30);
+		
+
+	}
+	@AfterClass
+	private void AftreClass() {
+		
+
+	}
+	@Test
+	
+	private void test() {
+		close();
+		
+		
+
+	}
+	
+}

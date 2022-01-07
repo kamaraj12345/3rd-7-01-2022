@@ -1,0 +1,13 @@
+package org.test;
+
+import org.testng.annotations.Test;
+
+public class Employee {
+	
+	@Test
+	
+private void test() {
+	// TODO Auto-generated method stub
+
+}
+}

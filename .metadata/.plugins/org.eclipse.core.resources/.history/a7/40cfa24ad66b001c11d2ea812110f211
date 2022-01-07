@@ -1,0 +1,16 @@
+package org.dem;
+
+public class add {
+
+	public static void main(String[] args) {
+		
+		int  a= 100;
+		int b =a;
+for (int i = 0; i < 100; i+=2) {
+	b=b+i;
+	
+}
+	System.out.println(b);
+	}
+	
+}

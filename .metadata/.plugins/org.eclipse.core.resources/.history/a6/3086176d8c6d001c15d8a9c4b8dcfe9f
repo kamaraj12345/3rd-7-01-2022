@@ -1,0 +1,53 @@
+package org.demo;
+
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
+
+public class BookAHotel extends baseclass {
+	public BookAHotel() {
+		PageFactory.initElements(driver, this);
+		
+		
+		@FindBy(id="first_name")
+		private WebElement TxtName;
+	
+		@FindBy(id="radiobutton_0")
+		private WebElement radioclick;
+		
+		@FindBy(id="radiobutton_0")
+		private WebElement radioclick;
+		
+		@FindBy(id="radiobutton_0")
+		private WebElement radioclick;
+		
+		@FindBy(id="radiobutton_0")
+		private WebElement radioclick;
+		
+		@FindBy(id="radiobutton_0")
+		private WebElement radioclick;
+		
+		@FindBy(id="radiobutton_0")
+		private WebElement radioclick;
+		
+		@FindBy(id="radiobutton_0")
+		private WebElement radioclick;
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	}
+	
+	
+	
+
+}

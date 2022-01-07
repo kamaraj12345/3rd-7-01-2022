@@ -1,0 +1,23 @@
+package org.demo;
+
+import org.junit.BeforeClass;
+import org.junit.Test;
+
+public class finaloutput extends baseclass{
+	
+	@BeforeClass
+	public static void BeforeClass() {
+		getDriver();
+		loadUrl("https://adactinhotelapp.com/");
+		
+
+	}
+	@Test
+	public void booking() {
+		LoginPage lp = new LoginPage();
+		lp.signup("greens", "password");
+		
+	
+	}
+
+}

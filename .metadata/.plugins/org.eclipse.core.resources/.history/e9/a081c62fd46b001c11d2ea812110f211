@@ -1,0 +1,22 @@
+package org.dem;
+
+public class add {
+
+	public static void main(String[] args) {
+		//int i = 10;
+		//i = i+i+2;
+		//System.out.println(i);
+
+	
+		for (int i=10; i < 10; i+=2) {
+			
+			int n=i;
+			
+			int b =n+2;
+			int c = n+b;
+			
+			System.out.println(c);
+		}
+	}
+
+}

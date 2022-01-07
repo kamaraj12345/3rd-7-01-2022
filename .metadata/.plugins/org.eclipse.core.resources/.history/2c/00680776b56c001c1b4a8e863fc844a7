@@ -1,0 +1,50 @@
+package org.demo;
+
+import java.io.IOException;
+
+import org.junit.AfterClass;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.WebElement;
+
+import junit.framework.Assert;
+
+public class Junit extends baseclass{
+	String path ="D:\\Pradeep\\ECLIPS\\eclipse\\demo\\excell data\\New Microsoft Excel Worksheet.xlsx";
+	@BeforeClass
+	public static void BeforeClass() {
+		getDriver();
+		loadUrl("http://adactinhotelapp.com/");
+		imple(30);
+		
+		
+	}
+@AfterClass
+	public static void AfterClass() {
+	close();
+		
+	}
+
+@Test
+public void Test1() throws IOException {
+	
+	
+	WebElement username = findElementById("username");
+	String name = getData(path,"Sheet1" , 1, 0);
+	type(username, name);
+	String arttibuteusernmae = getAttributeValue(username);
+	Assert.assertEquals("verifyusername", arttibuteusernmae, name);
+	
+}
+
+@Test
+public  void Test2() throws IOException {
+	WebElement password = findElementById("password");
+	String passwordtxt = getData(path, "Sheet1", 1, 1);
+	type(password, passwordtxt);
+	String attributeValuepassword = getAttributeValue(password);
+	Assert.assertEquals("verifing paassword", attributeValuepassword, passwordtxt);
+}
+
+
+}

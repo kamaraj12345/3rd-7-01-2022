@@ -1,0 +1,63 @@
+package org.demo;
+
+import org.junit.After;
+import org.junit.AfterClass;
+import org.junit.Before;
+import org.junit.BeforeClass;
+import org.junit.Test;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class Jaya {
+	WebDriver driver;
+	
+	
+	@BeforeClass
+	private void Beforeclass() {
+		WebDriverManager.chromedriver().setup();
+		 driver = new ChromeDriver();
+		 
+		 driver.get("");
+		
+
+	}
+	
+	@AfterClass
+private void AfterClass() {
+	driver.close();
+}
+	
+	@Before
+private void before() {
+	long start = System.currentTimeMillis();
+	System.out.println(start);
+
+}
+@After
+private void after() {
+	long end = System.currentTimeMillis();
+	System.out.println(end);
+
+	
+
+}
+
+@Test
+private void test() {
+	WebElement username = driver.findElement(By.id(""));
+	username.sendKeys("greens");
+	WebElement pass = driver.findElement(By.id(""));
+	pass.sendKeys("Hello");
+	
+	WebElement btn = driver.findElement(By.id(""));
+	btn.click();
+	
+	
+
+}
+}
+
